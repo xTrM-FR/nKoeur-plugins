@@ -27,7 +27,19 @@ goto loop
 
 :timeisgud
 
-start mlp.mp4
+SET /A rnd=%RANDOM% * 4 / 32768 + 1
+IF "%rnd%"=="1" dp (
+	start assets\mlp.mp4
+)
+IF "%rnd%"=="2" dp (
+	start assets\OUIOUI.mp3
+)
+IF "%rnd%"=="3" dp (
+	start assets\cancer.mp3
+)
+IF "%rnd%"=="4" dp (
+	start assets\crab.mp4
+)
 
 PING localhost -n 70 >NUL
 

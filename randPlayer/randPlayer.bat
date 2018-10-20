@@ -27,18 +27,23 @@ goto loop
 
 :timeisgud
 
-SET /A rnd=%RANDOM% * 4 / 32768 + 1
-IF "%rnd%"=="1" dp (
+set /a rnd=%random% %%5
+IF "%rnd%" EQU "1" (
 	start assets\mlp.mp4
 )
-IF "%rnd%"=="2" dp (
+IF "%rnd%" EQU "2" (
 	start assets\OUIOUI.mp3
 )
-IF "%rnd%"=="3" dp (
+IF "%rnd%" EQU "3" (
 	start assets\cancer.mp3
 )
-IF "%rnd%"=="4" dp (
+IF "%rnd%" EQU "4" (
 	start assets\crab.mp4
+)
+
+:: Au cas ou, ouioui
+IF "%rnd%" EQU "5" (
+	start assets\OUIOUI.mp3
 )
 
 PING localhost -n 70 >NUL
